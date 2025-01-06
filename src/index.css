@@ -69,6 +69,10 @@
   body {
     @apply bg-background font-["Geist"] text-zinc-900;
   }
+  a,
+  button {
+    @apply focus-visible:outline-offset-4 focus-visible:outline-purple-700;
+  }
 }
 
 #root {
