@@ -70,5 +70,9 @@
 }
 
 #root {
-  @apply flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip;
+  @apply flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip [&>_main]:flex-auto;
+}
+
+.container {
+  @apply max-w-[82rem];
 }
