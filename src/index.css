@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,7 +67,7 @@
     @apply h-full w-full;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-["Geist"] text-zinc-900;
   }
 }
 
