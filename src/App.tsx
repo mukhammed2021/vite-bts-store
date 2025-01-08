@@ -1,3 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import { AppLayout } from "./app-layout";
+import { Home } from "./pages/home";
+import { Product } from "./pages/product";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/product" element={<Product />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
