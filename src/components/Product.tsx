@@ -16,7 +16,7 @@ export default function Product({
   exclusive,
 }: ProductProps) {
   return (
-    <article className="group relative rounded-sm border border-zinc-200">
+    <article className="group relative flex h-full flex-col rounded-sm border border-zinc-200">
       <Link to="/" className="block">
         <img
           src={src}
@@ -24,8 +24,8 @@ export default function Product({
           className="aspect-[222/222] size-full object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
         />
       </Link>
-      <div className="px-2 pb-[.625rem] pt-2">
-        <h3 className="mb-[1.125rem] text-sm font-semibold">
+      <div className="flex h-full flex-col px-2 pb-[.625rem] pt-2">
+        <h3 className="mb-[1.125rem] grow text-sm font-semibold">
           <Link to="/" className="after:absolute after:inset-0">
             {title}
           </Link>
