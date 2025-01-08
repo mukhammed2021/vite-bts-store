@@ -5,7 +5,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export default function Header() {
   return (
-    <header className="border border-zinc-100">
+    <header className="sticky top-0 z-10 border-b border-zinc-100 bg-white">
       <div className="container flex min-h-[3.75rem] items-center justify-between">
         <Link to="/">
           <img src="logo.svg" alt="logo" />
