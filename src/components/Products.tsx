@@ -110,7 +110,7 @@ const products = [
 
 export default function Products() {
   return (
-    <main>
+    <main className="flex-auto pl-4 pr-4 md:pl-2">
       <ProductsHeader />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-[.625rem] pb-4">
         {products.map((product) => (
