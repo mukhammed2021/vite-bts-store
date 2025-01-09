@@ -21,7 +21,7 @@ export default function Product({
         <img
           src={src}
           alt={title}
-          className="aspect-[222/222] size-full object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
+          className="aspect-[222/222] size-full rounded-t-sm object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
         />
       </Link>
       <div className="flex h-full flex-col px-2 pb-[.625rem] pt-2">
