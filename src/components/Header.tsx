@@ -8,7 +8,7 @@ export default function Header() {
     <header className="sticky top-0 z-20 mb-7 border-b border-zinc-100 bg-white px-4">
       <div className="flex min-h-[3.75rem] items-center justify-between">
         <Link to="/">
-          <img src="logo.svg" alt="logo" />
+          <img src="/logo.svg" alt="logo" />
         </Link>
         <div className="flex items-center gap-3">
           <button type="button">
