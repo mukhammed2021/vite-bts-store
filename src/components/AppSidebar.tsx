@@ -31,7 +31,7 @@ export default function AppSidebar() {
           <form className="mb-[1.875rem] flex items-center gap-x-[.375rem]">
             <Input
               placeholder="Search for a product"
-              className="h-[2.125rem] rounded-sm border-zinc-200 p-0 px-2 placeholder:text-zinc-300 focus-visible:ring-purple-700"
+              className="h-[2.125rem] rounded-sm border-zinc-200 bg-transparent p-0 px-2 placeholder:text-zinc-300 focus-visible:ring-purple-700"
             />
             <Button className="size-[2.125rem] bg-zinc-500">
               <Search />
@@ -58,14 +58,14 @@ export default function AppSidebar() {
                 type="number"
                 defaultValue={0}
                 min={0}
-                className="h-[2.125rem] w-full border-zinc-200 py-0 focus-visible:ring-purple-700"
+                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700"
               />
               <Separator className="w-[.5625rem] bg-zinc-600" />
               <Input
                 type="number"
                 defaultValue={10000}
                 min={0}
-                className="h-[2.125rem] w-full border-zinc-200 py-0 focus-visible:ring-purple-700"
+                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700"
               />
             </div>
           </div>
