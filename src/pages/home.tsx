@@ -4,11 +4,11 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 
 export function Home() {
   return (
-    <div className="page">
+    <>
       <SidebarProvider>
         <AppSidebar />
         <Products />
       </SidebarProvider>
-    </div>
+    </>
   );
 }
