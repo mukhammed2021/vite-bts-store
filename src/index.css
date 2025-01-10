@@ -92,7 +92,7 @@
 }
 
 #root {
-  @apply flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip [&>_.page]:flex-auto;
+  @apply flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip [&>_main]:flex-auto;
 }
 
 .container {
