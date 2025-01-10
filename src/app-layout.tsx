@@ -5,9 +5,7 @@ export function AppLayout() {
   return (
     <>
       <Header />
-      <div className="page">
-        <Outlet />
-      </div>
+      <Outlet />
     </>
   );
 }
