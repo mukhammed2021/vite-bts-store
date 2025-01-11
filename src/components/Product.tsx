@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 interface ProductProps {
+  id: number;
   src: string;
   title: string;
   category: string;
@@ -9,6 +10,7 @@ interface ProductProps {
 }
 
 export default function Product({
+  id,
   src,
   title,
   category,
@@ -17,7 +19,7 @@ export default function Product({
 }: ProductProps) {
   return (
     <article className="group relative flex h-full flex-col rounded-sm border border-zinc-200">
-      <Link to="/" className="block">
+      <Link to={`/product/${id}`} className="block">
         <img
           src={src}
           alt={title}
@@ -26,7 +28,7 @@ export default function Product({
       </Link>
       <div className="flex h-full flex-col px-2 pb-[.625rem] pt-2">
         <h3 className="mb-[1.125rem] grow text-sm font-semibold">
-          <Link to="/" className="after:absolute after:inset-0">
+          <Link to={`/product/${id}`} className="after:absolute after:inset-0">
             {title}
           </Link>
         </h3>
