@@ -83,11 +83,11 @@
     @apply h-full w-full;
   }
   body {
-    @apply bg-background font-["Geist"] text-zinc-900;
+    @apply bg-background font-["Geist"] text-zinc-900 dark:bg-zinc-950 dark:text-zinc-500;
   }
   a,
   button {
-    @apply focus-visible:outline-offset-4 focus-visible:outline-purple-700;
+    @apply focus-visible:outline-offset-4 focus-visible:outline-purple-700 dark:rounded-sm dark:focus-visible:outline-none dark:focus-visible:outline-offset-4 dark:focus-visible:outline-purple-700;
   }
 }
 
