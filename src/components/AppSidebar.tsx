@@ -43,7 +43,7 @@ export default function AppSidebar() {
           <SidebarMenu className="mb-[1.125rem] border-l border-l-zinc-200 dark:border-l-zinc-800">
             {categories.map((category) => (
               <SidebarMenuItem key={category}>
-                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent dark:text-zinc-500 dark:hover:border-l-zinc-400 dark:hover:text-zinc-400">
+                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent dark:rounded-none dark:text-zinc-500 dark:hover:border-l-zinc-400 dark:hover:text-zinc-400">
                   {category}
                 </SidebarMenuButton>
               </SidebarMenuItem>
