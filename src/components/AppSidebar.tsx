@@ -31,26 +31,26 @@ export default function AppSidebar() {
           <form className="mb-[1.875rem] flex items-center gap-x-[.375rem]">
             <Input
               placeholder="Search for a product"
-              className="h-[2.125rem] rounded-sm border-zinc-200 bg-transparent p-0 px-2 placeholder:text-zinc-300 focus-visible:ring-purple-700"
+              className="h-[2.125rem] rounded-sm border-zinc-200 bg-transparent p-0 px-2 placeholder:text-zinc-300 focus-visible:ring-purple-700 dark:border-zinc-800 dark:placeholder:text-zinc-700"
             />
-            <Button className="size-[2.125rem] bg-zinc-500">
+            <Button className="size-[2.125rem] bg-zinc-500 dark:bg-zinc-600">
               <Search />
             </Button>
           </form>
-          <SidebarGroupLabel className="mb-5 h-auto px-0 text-sm font-medium text-zinc-800">
+          <SidebarGroupLabel className="mb-5 h-auto px-0 text-sm font-medium text-zinc-800 dark:text-zinc-300">
             Categories
           </SidebarGroupLabel>
-          <SidebarMenu className="mb-[1.125rem] border-l border-zinc-200">
+          <SidebarMenu className="mb-[1.125rem] border-l border-l-zinc-200 dark:border-l-zinc-800">
             {categories.map((category) => (
               <SidebarMenuItem key={category}>
-                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent">
+                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent dark:text-zinc-500 dark:hover:border-l-zinc-400 dark:hover:text-zinc-400">
                   {category}
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
           </SidebarMenu>
-          <div className="space-y-2 border-t border-zinc-300 pt-[.875rem]">
-            <p className="text-sm uppercase tracking-widest text-zinc-800">
+          <div className="space-y-2 border-t border-t-zinc-300 pt-[.875rem] dark:border-t-zinc-700">
+            <p className="text-sm uppercase tracking-widest text-zinc-800 dark:text-zinc-300">
               PRICE FILTER
             </p>
             <div className="flex items-center justify-between gap-x-[.375rem]">
@@ -58,14 +58,14 @@ export default function AppSidebar() {
                 type="number"
                 defaultValue={0}
                 min={0}
-                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700"
+                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700 dark:border-zinc-800 dark:text-zinc-400"
               />
-              <Separator className="w-[.5625rem] bg-zinc-600" />
+              <Separator className="w-[.5625rem] bg-zinc-600 dark:bg-zinc-400" />
               <Input
                 type="number"
                 defaultValue={10000}
                 min={0}
-                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700"
+                className="h-[2.125rem] w-full border-zinc-200 bg-transparent py-0 focus-visible:ring-purple-700 dark:border-zinc-800 dark:text-zinc-400"
               />
             </div>
           </div>

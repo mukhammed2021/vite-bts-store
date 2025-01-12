@@ -18,7 +18,7 @@ export default function Product({
   exclusive,
 }: ProductProps) {
   return (
-    <article className="group relative flex flex-col rounded-sm border border-zinc-200">
+    <article className="group relative flex flex-col rounded-sm border border-zinc-200 dark:border-zinc-800">
       <Link to={`/product/${id}`} className="block overflow-hidden">
         <img
           src={src}
@@ -27,17 +27,19 @@ export default function Product({
         />
       </Link>
       <div className="flex flex-auto flex-col px-2 pb-[.625rem] pt-2">
-        <h3 className="mb-[1.125rem] grow text-sm font-semibold">
+        <h3 className="mb-[1.125rem] grow text-sm font-semibold dark:text-zinc-400">
           <Link to={`/product/${id}`} className="after:absolute after:inset-0">
             {title}
           </Link>
         </h3>
         <div className="relative space-y-[.875rem] text-xs">
-          <p className="uppercase tracking-widest">{category}</p>
+          <p className="uppercase tracking-widest dark:text-zinc-500">
+            {category}
+          </p>
           <div className="flex items-center justify-between">
-            <span className="font-medium">${price}</span>
+            <span className="font-medium dark:text-zinc-600">${price}</span>
             {exclusive && (
-              <span className="rounded-sm bg-zinc-300 px-2 py-1 uppercase text-zinc-500 transition-colors duration-300 group-hover:bg-purple-600 group-hover:text-white">
+              <span className="rounded-sm bg-zinc-300 px-2 py-1 uppercase text-zinc-500 transition-colors duration-300 group-hover:bg-purple-600 group-hover:text-white dark:bg-zinc-800">
                 exclusive
               </span>
             )}
