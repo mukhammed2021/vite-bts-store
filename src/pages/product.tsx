@@ -46,7 +46,7 @@ export function Product() {
                   <DrawerContent>
                     <div className="flex items-end justify-between gap-4 px-4 py-2">
                       <div className="flex items-center">
-                        <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:border-zinc-700 dark:hover:bg-zinc-800">
+                        <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-e-none dark:border-zinc-700 dark:hover:bg-zinc-800">
                           <Minus className="text-zinc-600 dark:text-zinc-400" />
                         </Button>
                         <Input
@@ -55,7 +55,7 @@ export function Product() {
                           type="number"
                           className="h-11 w-[3.75rem] rounded-none border-x-0 border-zinc-200 bg-transparent text-center focus-visible:ring-purple-700 dark:border-zinc-700 dark:text-zinc-400"
                         />
-                        <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:border-zinc-700 dark:hover:bg-zinc-800">
+                        <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-s-none dark:border-zinc-700 dark:hover:bg-zinc-800">
                           <Plus className="text-zinc-600 dark:text-zinc-400" />
                         </Button>
                       </div>
@@ -85,7 +85,7 @@ export function Product() {
                       <span>Add to Cart</span>
                     </Button>
                     <div className="flex items-center">
-                      <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:border-zinc-700 dark:hover:bg-zinc-800">
+                      <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-e-none dark:border-zinc-700 dark:hover:bg-zinc-800">
                         <Minus className="text-zinc-600 dark:text-zinc-400" />
                       </Button>
                       <Input
@@ -94,7 +94,7 @@ export function Product() {
                         type="number"
                         className="h-11 w-[3.75rem] rounded-none border-x-0 border-zinc-200 bg-transparent text-center focus-visible:ring-purple-700 dark:border-zinc-700 dark:text-zinc-400"
                       />
-                      <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:border-zinc-700 dark:hover:bg-zinc-800">
+                      <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-s-none dark:border-zinc-700 dark:hover:bg-zinc-800">
                         <Plus className="text-zinc-600 dark:text-zinc-400" />
                       </Button>
                     </div>
