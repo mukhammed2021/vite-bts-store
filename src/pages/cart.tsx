@@ -20,7 +20,10 @@ export function Cart() {
             <article className="flex items-start gap-3 rounded-lg p-5 shadow-lg dark:bg-zinc-900">
               <Checkbox />
               <div className="flex flex-auto flex-col items-start gap-5 sm:flex-row">
-                <Link to="/product/1" className="overflow-hidden rounded-md">
+                <Link
+                  to="/product/1"
+                  className="shrink-0 basis-32 overflow-hidden rounded-md"
+                >
                   <img
                     src="/products/hoodie.png"
                     width={128}
