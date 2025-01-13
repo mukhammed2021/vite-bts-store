@@ -33,7 +33,7 @@ export default function AppSidebar() {
               placeholder="Search for a product"
               className="h-[2.125rem] rounded-sm border-zinc-200 bg-transparent p-0 px-2 placeholder:text-zinc-300 focus-visible:ring-purple-700 dark:border-zinc-800 dark:placeholder:text-zinc-700"
             />
-            <Button className="size-[2.125rem] bg-zinc-500 dark:bg-zinc-600">
+            <Button className="size-[2.125rem] bg-zinc-500 focus-visible:ring-purple-700 dark:bg-zinc-600 dark:focus-visible:outline-none">
               <Search />
             </Button>
           </form>
@@ -43,7 +43,7 @@ export default function AppSidebar() {
           <SidebarMenu className="mb-[1.125rem] border-l border-l-zinc-200 dark:border-l-zinc-800">
             {categories.map((category) => (
               <SidebarMenuItem key={category}>
-                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent dark:rounded-none dark:text-zinc-500 dark:hover:border-l-zinc-400 dark:hover:text-zinc-400">
+                <SidebarMenuButton className="rounded-none border-l-2 border-transparent px-4 text-zinc-600 hover:border-l-2 hover:border-zinc-800 hover:bg-transparent hover:text-zinc-800 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-purple-700 active:bg-transparent dark:rounded-none dark:text-zinc-500 dark:hover:border-l-zinc-400 dark:hover:text-zinc-400 dark:focus-visible:rounded-sm dark:focus-visible:outline-none">
                   {category}
                 </SidebarMenuButton>
               </SidebarMenuItem>
