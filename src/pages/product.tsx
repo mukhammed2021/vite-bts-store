@@ -1,7 +1,6 @@
 // import { useParams } from "react-router";
-import { Minus, Plus, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Drawer,
@@ -9,6 +8,7 @@ import {
   DrawerFooter,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import QuantityProductPrice from "@/components/QuantityProductPrice";
 
 export function Product() {
   // const { id } = useParams();
@@ -35,7 +35,7 @@ export function Product() {
             <p className="mb-5 text-base text-purple-700 dark:text-purple-500 sm:mb-[2.125rem] sm:text-lg">
               $12.30
             </p>
-            <div className="mb-5 flex flex-wrap items-end justify-between gap-4 border-b border-b-purple-700 pb-[.875rem] dark:border-b-purple-400">
+            <div className="mb-5 flex items-end gap-5 border-b border-b-purple-700 pb-[.875rem] dark:border-b-purple-400">
               {isMobile ? (
                 <Drawer>
                   <DrawerTrigger asChild>
@@ -45,23 +45,7 @@ export function Product() {
                   </DrawerTrigger>
                   <DrawerContent>
                     <div className="flex items-end justify-between gap-4 px-4 py-2">
-                      <div className="flex items-center">
-                        <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-e-none dark:border-zinc-700 dark:hover:bg-zinc-800">
-                          <Minus className="text-zinc-600 dark:text-zinc-400" />
-                        </Button>
-                        <Input
-                          min={1}
-                          defaultValue={1}
-                          type="number"
-                          className="h-11 w-[3.75rem] rounded-none border-x-0 border-zinc-200 bg-transparent text-center focus-visible:ring-purple-700 dark:border-zinc-700 dark:text-zinc-400"
-                        />
-                        <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-s-none dark:border-zinc-700 dark:hover:bg-zinc-800">
-                          <Plus className="text-zinc-600 dark:text-zinc-400" />
-                        </Button>
-                      </div>
-                      <p className="text-lg font-semibold text-purple-700 dark:text-purple-500">
-                        $12.30
-                      </p>
+                      <QuantityProductPrice />
                     </div>
                     <DrawerFooter>
                       <Button
@@ -76,32 +60,14 @@ export function Product() {
                 </Drawer>
               ) : (
                 <>
-                  <div className="flex items-center gap-5">
-                    <Button
-                      type="button"
-                      className="h-11 bg-purple-600 text-zinc-100 hover:bg-purple-700 focus-visible:ring-purple-700"
-                    >
-                      <ShoppingCart />
-                      <span>Add to Cart</span>
-                    </Button>
-                    <div className="flex items-center">
-                      <Button className="h-11 rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-e-none dark:border-zinc-700 dark:hover:bg-zinc-800">
-                        <Minus className="text-zinc-600 dark:text-zinc-400" />
-                      </Button>
-                      <Input
-                        min={1}
-                        defaultValue={1}
-                        type="number"
-                        className="h-11 w-[3.75rem] rounded-none border-x-0 border-zinc-200 bg-transparent text-center focus-visible:ring-purple-700 dark:border-zinc-700 dark:text-zinc-400"
-                      />
-                      <Button className="h-11 rounded-e-sm rounded-s-none border-y border-r border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-s-none dark:border-zinc-700 dark:hover:bg-zinc-800">
-                        <Plus className="text-zinc-600 dark:text-zinc-400" />
-                      </Button>
-                    </div>
-                  </div>
-                  <p className="text-lg font-semibold text-purple-700 dark:text-purple-500">
-                    $12.30
-                  </p>
+                  <Button
+                    type="button"
+                    className="h-11 bg-purple-600 text-zinc-100 hover:bg-purple-700 focus-visible:ring-purple-700"
+                  >
+                    <ShoppingCart />
+                    <span>Add to Cart</span>
+                  </Button>
+                  <QuantityProductPrice />
                 </>
               )}
             </div>
