@@ -23,4 +23,15 @@ export const getProduct = async (req: Request, res: Response) => {
   }
 };
 
+export const addProduct = async (req: Request, res: Response) => {
+  const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
+  const product = new Product({ ...req.body, imageUrl });
+
+  try {
+    const result = await product.save();
+    res.status(201).json(result);
+  } catch (err) {
+    handleError(res, err);
+  }
+};
