@@ -2,9 +2,15 @@ import { Minus, Plus } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-export default function QuantityProductPrice() {
+interface QuantityProductPriceProps {
+  price: number | undefined;
+}
+
+export default function QuantityProductPrice({
+  price,
+}: QuantityProductPriceProps) {
   return (
-    <div className="flex w-full flex-wrap items-end justify-between gap-x-5 gap-y-2">
+    <div className="flex w-full items-end justify-between gap-x-5 gap-y-2">
       <div className="flex h-11 items-center">
         <Button className="h-full rounded-e-none rounded-s-sm border-y border-l border-zinc-200 bg-transparent hover:bg-zinc-200 focus-visible:ring-purple-700 dark:rounded-e-none dark:border-zinc-700 dark:hover:bg-zinc-800">
           <Minus className="text-zinc-600 dark:text-zinc-400" />
@@ -20,7 +26,7 @@ export default function QuantityProductPrice() {
         </Button>
       </div>
       <p className="text-lg font-semibold text-purple-700 dark:text-purple-500">
-        $12.30
+        ${price}
       </p>
     </div>
   );
