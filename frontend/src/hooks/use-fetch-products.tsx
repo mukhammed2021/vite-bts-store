@@ -12,7 +12,7 @@ export const productSchema = z.object({
 
 const productsSchema = z.array(productSchema);
 
-type Products = z.infer<typeof productsSchema>;
+export type Products = z.infer<typeof productsSchema>;
 
 export function useFetchProducts() {
   const [products, setProducts] = useState<Products | []>([]);
