@@ -1,5 +1,5 @@
 import AppSidebar from "@/components/AppSidebar";
-import Products from "@/components/Products";
+import Main from "@/components/main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 export function Home() {
@@ -7,7 +7,7 @@ export function Home() {
     <>
       <SidebarProvider>
         <AppSidebar />
-        <Products />
+        <Main />
       </SidebarProvider>
     </>
   );

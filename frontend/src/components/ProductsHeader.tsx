@@ -7,7 +7,11 @@ import {
 } from "./ui/select";
 import { SidebarTrigger } from "./ui/sidebar";
 
-export default function ProductsHeader() {
+interface ProductsHeaderProps {
+  setSort: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function ProductsHeader({ setSort }: ProductsHeaderProps) {
   return (
     <div className="mb-[.875rem] flex items-center justify-between border-b border-b-purple-700 pb-4 dark:border-b-purple-400">
       <div className="flex items-center gap-x-[.625rem]">
@@ -20,7 +24,10 @@ export default function ProductsHeader() {
         <span className="hidden text-sm uppercase tracking-widest dark:text-zinc-300 min-[425px]:block">
           sort by
         </span>
-        <Select>
+        <Select
+          defaultValue="default"
+          onValueChange={(value: string) => setSort(value)}
+        >
           <SelectTrigger className="gap-3 border border-zinc-300 p-2 text-sm dark:border-zinc-700 dark:text-zinc-300">
             <SelectValue placeholder="Default" />
           </SelectTrigger>

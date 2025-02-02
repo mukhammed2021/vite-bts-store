@@ -1,25 +1,28 @@
-import { useFetchProducts } from "@/hooks/use-fetch-products";
+import { Products as ProductsType } from "@/hooks/use-fetch-products";
 import Product from "./Product";
-import ProductsHeader from "./ProductsHeader";
 
-export default function Products() {
-  const { products, isLoading } = useFetchProducts();
+interface ProductsProps {
+  products: ProductsType;
+  sort: string;
+}
 
-  if (isLoading)
-    return (
-      <div className="flex min-h-full w-full items-center justify-center">
-        Loading...
-      </div>
-    );
-
-  return (
-    <main className="flex-auto pl-4 pr-4 md:pl-2">
-      <ProductsHeader />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-[.625rem] pb-4">
-        {products.map((product) => (
-          <Product key={product._id} {...product} />
-        ))}
-      </div>
-    </main>
+export default function Products({ products, sort }: ProductsProps) {
+  const sortPriceProductsByAsc = [...products].sort(
+    (a, b) => a.price - b.price,
   );
+  const sortPriceProductsByDesc = [...products].sort(
+    (a, b) => b.price - a.price,
+  );
+
+  if (sort === "asc") {
+    return sortPriceProductsByAsc.map((product) => (
+      <Product key={product._id} {...product} />
+    ));
+  } else if (sort === "desc") {
+    return sortPriceProductsByDesc.map((product) => (
+      <Product key={product._id} {...product} />
+    ));
+  }
+
+  return products.map((product) => <Product key={product._id} {...product} />);
 }
